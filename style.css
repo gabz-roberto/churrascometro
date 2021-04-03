@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    float: right;
+    width: 30%;
+    height: 100%;
+    background-color: rgba(92, 31, 31, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.container h2 {
+    font-size: 2rem;
+}
+
+.container input, select {
+    width: 80%;
+    padding: 5px;
+    outline: none;
+    margin: 10px 0;
+    font-size: 1.1rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.container select {
+    width: 80px;
+}
+
+#seNao {
+    display: none;
+}
+
+#btn-calcular {
+    padding: 10px;
+    width: 100px;
+    background-color: #b4f7b4;
+}
+
+#btn-calcular:hover {
+    background-color: #24cc24;
+    border: 1px solid#24cc24;
+    color: #fff
+}
+
+header {
+    float: left;
+    clear: both;
+    width: 70%;
+    margin-top: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(92, 31, 31, 0.5);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header {
+        width: 100%;
+        height: 80px;
+        margin-top: 0;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        width: 70%;
+        font-size: 1rem;
+    }
+
+    .container h2 {
+        font-size: 1.5rem;
+    }
+
+    .container input {
+        width: 60%;
+        font-size: 1rem;
+    }
+}
+
+#resultado {
+    margin-top: 50px;
+}

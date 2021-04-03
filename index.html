@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>ChurrasCômetro</title>
+</head>
+<body>
+  <header>
+    <h1>Saiba o quanto você irá consumir</h1>
+  </header>
+  <div class="container">
+    <h2>ChurrasCômetro</h2>
+        <input
+        type="number"
+        id="qtd_pessoas"
+        placeholder="Quantidade de pessoas"
+        min="0"
+        max="50"
+        oninput="validity.valid||(value='')"
+      />
+
+      <div class="verficarCervejas">
+        <label for="seBebem">Todas bebem cerveja? </label>
+        <select name="seBebem" id="seBebem" onchange="seNaoBebem()">
+          <option value="yes">Sim</option>
+          <option value="no">Não</option>
+        </select>
+      </div>
+
+      <input
+        type="number"
+        id="seNao"
+        placeholder="Quantas bebem?"
+        min="0"
+        max="50"
+        oninput="validity.valid||(value='')"
+      />
+
+      <input
+        type="number"
+        id="qtd_criancas"
+        placeholder="Quantidade de Crianças"
+        min="0"
+        max="50"
+        oninput="validity.valid||(value='')"
+      />
+
+      <input
+      type="number"
+      id="duracao"
+      placeholder="Duração"
+      min="0"
+      max="12"
+      oninput="validity.valid||(value='')"
+    />
+
+      <input
+        type="button"
+        value="Calcular"
+        id="btn-calcular"
+        onclick="funcoes()"
+      />
+      <div id="resultado"></div>
+    </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
